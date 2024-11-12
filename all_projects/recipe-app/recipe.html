@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe App</title>
+  <link rel="stylesheet" href="recipe-css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="main-title">Legendary Recipes by Nurik</h1>
+      <input type="text" id="search_input" placeholder="Recipe Search Place">
+      <div id="suggestions_menu" class="suggestions"></div>
+    </header>
+
+  <section id="recipe_main" class="main"></section>
+
+  <div id="window_details" class="window">
+    <div class="window-content">
+        <span class="close-btn" onclick="close_window()">&times;</span>
+        <div id="window_content_id"></div>
+    </div>
+  </div>
+
+    <section id="favorites_container" class="favorites">
+      <h2 class="favorites-title">Your Favorite Recipes List</h2>
+      <div id="favorites_menu" class="main"></div>
+      
+    </section>
+
+</div>
+  <script src="recipe-js.js"></script>
+</body>
+</html>

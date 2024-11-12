@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendary weather app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="weather-css.css">
+</head>
+<body>
+
+    <video autoplay loop muted id="legendary-video">
+        <source src="videos/sigma.mp4" type="video/mp4">
+    </video>
+
+    <div class="weather-app">
+      <header class="header">
+        <h1>Sigma Weather App</h1>
+        <div class="search-city">
+          <input type="text" id="city-input" placeholder="Search for the city here" oninput="suggestion_menu_func()" autocomplete="off">
+          <button onclick="fetch_weather_data()">Search</button>
+          <ul id="suggestions-list"></ul>
+        </div>
+        <button onclick="receive_location()">From your location</button>
+        <button id="change-temperature-id" onclick="change_temperature_func()">°C / °F</button>
+      </header>
+
+      <section class="weather-main">
+        <div id="current-weather-id" class="current-weather">
+            <h2 id="city-name">City: </h2>
+            <p id="temperature">Temperature: </p>
+            <p id="humidity">Humidity: </p>
+            <p id="wind-speed">Wind speed: </p>
+            <img id="weather-icon" alt="Weather icon">
+          </div>
+      </section>
+  
+
+      <section class="forecast-main">
+        <div id="forecast-id" class="forecast">
+
+        </div>
+      </section>
+  
+    </div>
+  
+    <script src="weather-js.js"></script>
+  </body>
+</html>

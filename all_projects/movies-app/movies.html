@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendary Movies</title>
+    <link rel="stylesheet" href="movies-css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="You can search movies here" autocomplete="off">
+            <ul id="suggestion-id" class="suggestions"></ul>
+        </div>
+        <button id="category-button">Category</button>
+        <button id="watchlist-button">Your Watchlist</button>
+        <div id="genre-dropdown" class="dropdown-list">
+            <ul>
+                <li genre-id="28">Action</li>
+                <li genre-id="35">Comedy</li>
+                <li genre-id="18">Drama</li>
+                <li genre-id="27">Horror</li>
+                <li genre-id="878">Sci-Fi</li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="movie-main">
+        <div class="movie-container" id="movie-container"></div>
+    </section>
+
+    <section class="movie-section">
+        <div id="movie-window" class="movie-window">
+            <div class="movie-window-content">
+              <span id="close-window" class="close">&times;</span>
+              <img id="movie-poster" src="" alt="Movie Poster" class="movie-poster">
+              <h2 id="movie-title"></h2>
+              <p id="movie-overview"></p>
+              <p><strong>Rating:</strong> <span id="movie-rating"></span></p>
+              <p><strong>Runtime:</strong> <span id="movie-runtime"></span></p>
+              <h3>Cast</h3>
+              <ul id="movie-cast"></ul>
+              <button id="add-to-watchlist-btn">Watch later</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="watchlist-section">
+        <div id="watchlist-window" class="watchlist-window">
+            <div class="watchlist-content">
+                <span id="close-watchlist" class="close">&times;</span>
+                <h2>Your Watchlist</h2>
+                <div id="watchlist-content"></div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="movies-js.js"></script>
+</html>
